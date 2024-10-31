@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "lato";
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    height: auto;
+    min-height: 4rem;
+    width: 100%;
+    box-shadow: 0 2px 4px lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+#left {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.5rem;
+}
+
+#left h3 {
+    color: #16A34A;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 900;
+}
+
+#right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+#right ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+#right ul li {
+    list-style-type: none;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.btn-primaryHeader {
+    background-image: linear-gradient(-180deg, #00D775, #00BD68);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    min-width: 100px;
+    height: auto;
+}
+
+.HeroSection1 {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#HeroTexth1 {
+    font-size: clamp(2rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+#SpanTextHero {
+    color: #16A34A;
+    display: inline-block;
+}
+
+#HeroTextp {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin: 2rem auto;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+#buttonsHero {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+#HeroBtngreen, #HeroBtnWhite {
+    padding: 1rem;
+    width: auto;
+    min-width: 150px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    background-image: linear-gradient(-180deg, #00D775, #00BD68);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#videoCard {
+    margin-top: 3rem;
+    min-height: 400px;
+    width: 100%;
+    border-radius: 10% 10% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00BD68;
+    padding: 2rem 1rem;
+}
+
+#VideoCardHeading {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#VideoCardInside {
+    width: min(90%, 1200px);
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+}
+
+#VideoCardInside video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#footer {
+    width: 100%;
+    background-color: #002a38;
+}
+
+#footerUl {
+    min-height: 200px;
+    padding: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+#footerUl li a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #right {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #right ul {
+        margin-bottom: 1rem;
+    }
+
+    #buttonsHero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #HeroBtngreen, #HeroBtnWhite {
+        width: min(80%, 300px);
+    }
+}
+
+@media (max-width: 480px) {
+    #HeroTexth1 br {
+        display: none;
+    }
+
+    #footerUl {
+        flex-direction: column;
+        text-align: center;
+    }
+}
